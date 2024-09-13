@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vectorization</title>
+    <link rel="stylesheet" href="app.component.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Mobile Dropdown Navbar -->
+        <div class="mobile-navbar">
+            <select id="mobile-theme">
+                <option value="dark">OPTION1</option>
+                <option value="light">OPTION2</option>
+            </select>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <label class="select-label" for="database">Select your option:</label>
+            <select class="select-container" id="database">
+                <option value="option1">OPTION1</option>
+                <option value="option2">OPTION2</option>
+            </select>
+
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="chat-area" id="chat-area">
+                <div class="message bot-message">
+                    <p>Hello! How can I assist you today?</p>
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type your message..." />
+                <button id="send-btn">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
