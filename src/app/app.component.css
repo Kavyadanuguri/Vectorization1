@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
-
-/* General Reset */
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -9,182 +8,267 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1f1f1f;
+    background-color: #1e1e1e;
     color: #fff;
     height: 100vh;
-    margin: 0;
+}
+.select-container{
+    width:100%;
+    height:45px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color:#424242;
+    color:#ffffff;
+    font-weight: bold;
+    text-align :center;
 }
 
-/* Container for Sidebar and Main Content */
+.select-label{
+    margin-top: 100px;
+}
+
+/* General form styling */
+.r-form {
+    margin: 20px;
+    padding: 10px;
+    margin-left:-1px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: scroll;
+}
+
+/* Radio group container */
+.r-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Radio input styling */
+.r-radio {
+    margin-bottom: 10px;
+}
+
+/* Radio button */
+.r-input-radio {
+    margin-right: 10px;
+}
+
+/* Radio label */
+.r-radio-label {
+    font-weight: normal;
+}
+
+/* File input section */
+.r-file-input {
+    margin-top: 20px;
+}
+
+/* File input label */
+.r-file-label {
+    font-size:12px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* File input field */
+.r-input-file {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Selected file name display */
+.r-file-selected {
+    margin-top: 15px;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Error message */
+.r-error-message {
+    margin-top: 15px;
+    color: red;
+    font-size: 14px;
+}
+
+
+/* Container */
 .container {
     display: flex;
-    width: 100%;
-    height: 100vh;
-}
-
-/* Mobile Navbar */
-.mobile-navbar {
-    display: none;
-    background-color: #333;
-    padding: 10px;
-}
-
-.mobile-navbar select {
-    width: 100%;
-    padding: 10px;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    width: 250px;
-    background-color: #333;
     height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #333;
     padding: 20px;
+    padding-top: 60px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
     display: flex;
     flex-direction: column;
 }
 
-
-
-.sidebar ul li a {
-    color: #bbb;
+.dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    display: block;
     text-decoration: none;
 }
 
-.sidebar ul li a:hover {
-    color: #fff;
+.dropdown-content a:hover {
+    background-color: #555;
 }
-
-.select-container {
-    height: 45px;
-    margin-top: 10px;
-    font-size: 18px;
-    border-radius: 7px;
-    padding: 5px;
-}
-
-/* Dropdown Section in Sidebar */
-
-.sidebar-label {
-    display: block;
-
-    color: #bbb;
-}
-
-
-
-
 
 /* Main Content */
-.main-content {
+.main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
-.chat-area {
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content:center;
+    width:100%;
+}
+
+/* Chat Area */
+.chat-container {
     flex-grow: 1;
+    padding: 20px;
+    background-color: #1e1e1e;
     overflow-y: auto;
-    background-color: #2e2e2e;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
 }
 
+.chat {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Messages */
 .message {
-    background-color: #444;
+    max-width: 60%;
     padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #2e7d32;
+    color: #fff;
+    margin-left: auto;
+    text-align: right;
+    align-self: flex-end;
 }
 
 .bot-message {
+    background-color: #424242;
     color: #fff;
+    margin-right: auto;
+    text-align: left;
+    align-self: flex-start;
 }
 
-.input-area {
+/* Input Container */
+.input-container {
     display: flex;
-    align-items: center;
-    background-color: #333;
     padding: 10px;
-    border-radius: 5px;
+    background-color: #333;
+    border-top: 1px solid #444;
 }
 
-.input-area input {
+input[type="text"] {
     flex-grow: 1;
     padding: 10px;
+    border: none;
     background-color: #444;
     color: #fff;
-    border: none;
-    border-radius: 5px;
 }
 
-.input-area button {
+input[type="file"] {
+    margin-left: 10px;
+}
+
+button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: hsl(120, 1%, 26%);
     color: white;
     border: none;
     border-radius: 5px;
     margin-left: 10px;
+    cursor: pointer;
+}
+.enter-btn{
+    background-color: #007bff;
 }
 
-.input-area button:hover {
-    background-color: #0056b3;
+.input-file{
+    height:0px;
+}
+.validatrix{
+    height:35px;
+    width:40px;
+    margin-right: 10px;
+}
+button:hover {
+    background-color: #555;
 }
 
-/* Mobile View Styling */
+/* Feedback Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 15% auto;
+    width: 50%;
+    color: white;
+}
+
+.modal-content textarea {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    cursor: pointer;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .sidebar {
         display: none;
     }
-
-    .mobile-navbar {
-        display: block;
-    }
-
-    .input-area input {
-        width: calc(100% - 80px);
-    }
-
-    .input-area button {
-        padding: 8px 12px;
-        margin-left: 5px;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-    }
-}
-
-/* Desktop View Styling */
-@media (min-width: 769px) {
-    .sidebar {
-        width: 250px;
-    }
-
-    .sidebar h2 {
-        font-size: 24px;
-    }
-
-    .sidebar ul li a {
-        font-size: 16px;
-    }
-
-    .input-area input {
-        width: calc(100% - 110px);
-    }
-
-    .input-area button {
-        padding: 10px 20px;
-        margin-left: 10px;
-    }
-
 }
